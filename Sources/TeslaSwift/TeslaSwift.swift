@@ -337,9 +337,9 @@ extension TeslaSwift {
 	
 	- returns: The current Vehicle
 	*/
-    public func wakeUp(_ vehicle: Vehicle) async throws -> Vehicle {
+    public func wakeUp(_ inVehicleID: Int) async throws -> Vehicle {
         _ = try await checkAuthentication()
-        let vehicleID = vehicle.id!
+        let vehicleID = "\(inVehicleID)"
         let response: Response<Vehicle> = try await request(.wakeUp(vehicleID: vehicleID), body: nullBody)
         return response.response
 	}
