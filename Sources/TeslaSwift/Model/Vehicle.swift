@@ -112,7 +112,7 @@ open class Vehicle: Codable {
 public class VehicleId {
     public let id: Int64
 
-    init(id: Int64) {
+    public init(id: Int64) {
         self.id = id
     }
 }
@@ -120,7 +120,7 @@ public class VehicleId {
 public class SiteId {
     public let id: Decimal
 
-    init(id: Decimal) {
+    public init(id: Decimal) {
         self.id = id
     }
 }
@@ -128,7 +128,7 @@ public class SiteId {
 public class BatteryId {
     public let id: String
 
-    init(id: String) {
+    public init(id: String) {
         self.id = id
     }
 }
